@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>UpdateProductField</fullName>
+        <field>Description</field>
+        <formula>ProductCode +&apos;10&apos;</formula>
+        <name>UpdateProductField</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateProductnewfield</fullName>
+        <field>Family</field>
+        <literalValue>None</literalValue>
+        <name>UpdateProductnewfield</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>UpdateProduct</fullName>
+        <actions>
+            <name>UpdateProductField</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UpdateProductnewfield</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Product2.Name</field>
+            <operation>equals</operation>
+            <value>maria</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>
