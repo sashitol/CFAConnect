@@ -1,6 +1,5 @@
 public class AccountController {
-//test1234561
-//testing gain
+//noo
 @AuraEnabled
     public static List<Account> getAccountsA()
     {
